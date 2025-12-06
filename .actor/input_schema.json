@@ -1,0 +1,58 @@
+{
+    "title": "Pinterest Data Extractor",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "Pinterest pin, board, profile, or search URLs to crawl",
+            "prefill": [
+                { "url": "https://www.pinterest.com/pin/1054827543951238554/" },
+                { "url": "https://www.pinterest.com/dudadelsanto/nail-inspo/" }
+            ],
+            "editor": "requestListSources"
+        },
+        "maxItems": {
+            "title": "Maximum items",
+            "type": "integer",
+            "description": "Maximum number of pins to extract across all inputs",
+            "minimum": 1,
+            "default": 20
+        },
+        "endPage": {
+            "title": "End page",
+            "type": "integer",
+            "description": "Soft cap to avoid crawling too many pages",
+            "minimum": 1,
+            "default": 1
+        },
+        "includeComments": {
+            "title": "Include comments",
+            "type": "boolean",
+            "description": "Extract on-page comments when available",
+            "default": false
+        },
+        "includeUserInfoOnly": {
+            "title": "Export only user profiles",
+            "type": "boolean",
+            "description": "When enabled, skip pins and export Pinterest user profiles found on the page",
+            "default": false
+        },
+        "extendOutputFunction": {
+            "title": "Extend output function (Python)",
+            "type": "string",
+            "description": "Python function that receives a record dictionary and returns additional fields",
+            "editor": "javascript",
+            "default": ""
+        },
+        "customMapFunction": {
+            "title": "Custom map function (Python)",
+            "type": "string",
+            "description": "Python function that receives a record dictionary and returns a transformed record",
+            "editor": "javascript",
+            "default": ""
+        }
+    },
+    "required": ["startUrls"]
+}

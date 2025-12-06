@@ -1,0 +1,58 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "title",
+                    "pin_url",
+                    "link",
+                    "price",
+                    "created_at",
+                    "hashtags",
+                    "user.username",
+                    "metrics.save_count"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "pin_url": {
+                        "label": "Pin URL",
+                        "format": "link"
+                    },
+                    "link": {
+                        "label": "Destination",
+                        "format": "link"
+                    },
+                    "price": {
+                        "label": "Price",
+                        "format": "text"
+                    },
+                    "created_at": {
+                        "label": "Created",
+                        "format": "date"
+                    },
+                    "hashtags": {
+                        "label": "Hashtags",
+                        "format": "array"
+                    },
+                    "user.username": {
+                        "label": "User",
+                        "format": "text"
+                    },
+                    "metrics.save_count": {
+                        "label": "Saves",
+                        "format": "number"
+                    }
+                }
+            }
+        }
+    }
+}
