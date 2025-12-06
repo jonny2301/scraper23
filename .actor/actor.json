@@ -1,0 +1,18 @@
+{
+    "actorSpecification": 1,
+    "name": "my-actor-1",
+    "title": "Getting started with Python Crawlee and BeautifulSoup",
+    "description": "Scrapes titles of websites using Crawlee and BeautifulSoup.",
+    "version": "0.0",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "python-crawlee-beautifulsoup",
+        "generatedBy": "GPT-5.1-Codex-Max"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}
